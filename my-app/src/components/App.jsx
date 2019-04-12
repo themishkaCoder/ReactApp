@@ -3,26 +3,30 @@ import "./css/App.css";
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Profile from './Profile';
-import {Route} from "react-router-dom"
+import Chat from './Chat';
+import {Route, Router, Switch, BrowserRouter} from "react-router-dom"
 
 
 
-const App = ()=> {
+const App = (props)=> {
     return (
+      <BrowserRouter>
       <div className="app-container">
         
         <Header/>
 
         <div className="wrapper">
-        <Sidebar/>
+          <Sidebar/>
 
-        <Profile/>
+          {/* <Profile/> */}
+
+          
+            <Route path="/" component={Profile}/>
+            <Route path="/chat" component={Chat}/>
+          
         </div>
-        
-        
-        
-
       </div>
+      </BrowserRouter>
     );
 }
 
