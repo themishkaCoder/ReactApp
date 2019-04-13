@@ -42,3 +42,19 @@ textarea{
     }
     
 }
+
+.messageWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.usersList{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.dialogs{
+    border-left: 2px solid green;
+    padding-left: 10px;
+}

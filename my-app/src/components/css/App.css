@@ -92,3 +92,24 @@ li{
     margin: auto;
     grid-gap: 10px;
 }
+
+@media screen and (min-width: 320px){
+    .sidebar{
+        display: none;
+    }
+    .wrapper{
+        grid-template-areas: "content content";
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .sidebar{
+        display: block;
+    }
+
+    .wrapper{
+        grid-template-areas: "sidebar content";
+        width: 1140px;
+    }
+}
